@@ -1,0 +1,32 @@
+$gt-color-red: #cf2e34;
+$gt-color-menubg: #353535;
+$gt-color-mastheadbg: #99999a;
+
+html,
+body {
+	font-family: 'Raleway', sans-serif;
+	margin: 0;
+	padding: 0;
+}
+
+h1 {
+	font-family: inherit;
+	font-size: 27px;
+	font-weight: 300;
+}
+h2 {
+	font-family: inherit;
+	font-size: 23px;
+	font-weight: 300;
+}
+
+
+a {
+	color: #ed1c24;
+}
+
+
+#wpstats {
+	float: left;
+	visibility: hidden;
+}
