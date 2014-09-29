@@ -1,3 +1,6 @@
 [submodule "framework/custom-meta-boxes"]
 	path = framework/custom-meta-boxes
 	url = https://github.com/humanmade/Custom-Meta-Boxes.git
+[submodule "framework/ReduxFramework"]
+	path = framework/ReduxFramework
+	url = https://github.com/ReduxFramework/ReduxFramework.git
