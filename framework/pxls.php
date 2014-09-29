@@ -71,6 +71,8 @@ class PXLS {
 		/* Sets the path to the core framework images directory URI. */
 		define( 'PXLS_IMAGES', trailingslashit( PXLS_FRAMEWORK_URI ) . 'images' );
 
+		define( 'PXLS_OPTIONS_URI', trailingslashit( PXLS_FRAMEWORK_URI ) . 'options' );
+
 		/* Sets the path to the core framework JavaScript directory URI. */
 		define( 'PXLS_JS', trailingslashit( PXLS_FRAMEWORK_URI ) . 'javascripts' );
 	}
@@ -86,7 +88,14 @@ class PXLS {
 		
 		require_once( trailingslashit( PXLS_FRAMEWORK_DIR ) . 'widgets.php' );                             
 		
-		require_once( trailingslashit( PXLS_FRAMEWORK_DIR ) . 'pxls-options.php' );                         
+		//require_once( trailingslashit( PXLS_FRAMEWORK_DIR ) . 'pxls-options.php' );  
+
+		if ( !class_exists( 'ReduxFramework' ) && file_exists( trailingslashit( PXLS_FRAMEWORK_DIR ) . 'ReduxFramework/ReduxCore/framework.php' ) ) {
+		    require_once( trailingslashit( PXLS_FRAMEWORK_DIR ) . 'ReduxFramework/ReduxCore/framework.php' );
+		}
+		if ( !isset( $PXLS_Options ) && file_exists( trailingslashit( PXLS_FRAMEWORK_DIR ) . 'pxls-options.php' ) ) {
+		    require_once( trailingslashit( PXLS_FRAMEWORK_DIR ) . 'pxls-options.php' );
+		}                       
 		
 		require_once( trailingslashit( PXLS_FRAMEWORK_DIR ) . 'comments_template.php' );                    
 		
