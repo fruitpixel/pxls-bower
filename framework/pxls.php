@@ -265,7 +265,7 @@ function pxls_text_trim( $text, $words = 50 ) {
  */
 function pxls_get_company_name() {
 	global $PXLS_Options;
-	$companyname = $PXLS_Options->get( 'pxls_company_name' );
+	$companyname = $PXLS_Options['pxls_company_name'];
 	if ( '' == $companyname ) {
 		$companyname = get_bloginfo( 'name' );
 	}
@@ -279,7 +279,7 @@ function pxls_get_company_name() {
  */
 function pxls_ga_code() {
 	global $PXLS_Options;
-	$enable = $PXLS_Options->get( 'ga_enable' );
+	$enable = $PXLS_Options['ga_enable'];
 	if ( $enable ) { ?>
 		<script type="text/javascript">
 			var _gaq = _gaq || [];
@@ -302,7 +302,7 @@ function pxls_ga_code() {
  */
 function pxls_get_company_logo() {
 	global $PXLS_Options;
-	$companylogo = $PXLS_Options->get( 'pxls_company_logo' );
+	$companylogo = $PXLS_Options['pxls_company_logo']['url'];
     return $companylogo;
 }
 
@@ -314,7 +314,7 @@ function pxls_get_company_logo() {
  */
 function pxls_login_style() {
 	global $PXLS_Options;
-	$loginlogo = $PXLS_Options->get( 'pxls_login_logo' );
+	$loginlogo = $PXLS_Options['pxls_login_logo']['url'];
 	if ( $loginlogo ) {
 		echo '<style type="text/css">';
 		echo 'h1 a { background-image:url(' . $loginlogo . ') !important; }';
@@ -330,7 +330,7 @@ add_action( 'login_head', 'pxls_login_style' );
  */
 function pxls_url_login(){
 	global $PXLS_Options;
-	$loginlogourl = $PXLS_Options->get( 'pxls_login_logo_url' );
+	$loginlogourl = $PXLS_Options['pxls_login_logo_url'];
 	if ( $loginlogourl && $loginlogourl != '' ) {
 		return $loginlogourl;
 	}

@@ -6,21 +6,41 @@
 		
 		<?php get_template_part( 'parts/tpl-before-all-content', 'front-page' ); ?>			
 		
-		<?php if ( have_posts() ) : ?>
-			<?php while ( have_posts() ) : the_post(); ?>
-				<div id="masthead" class="container">			
-					<div class="row">					
-						<div class="small-12 large-6 columns text-content">				
-							<?php the_content(); ?>	
+		<div id="middle" class="container">			
+			<div class="row">
+			
+				<div id="column-2" class="<?php pxls_contentcolumn_width_classes(); ?>">
+				
+					<?php get_template_part( 'parts/tpl-before-content', 'front-page' ); ?>
+					
+					<?php if ( have_posts() ) : ?>
+						<?php while(have_posts()) : the_post(); ?>
+							<div id="post-<?php the_ID(); ?>" <?php post_class( 'row' ); ?>>
+								<div class="small-12 columns">
+									<?php the_content(); ?>
+								</div>
+							</div>
+						<?php endwhile; ?>
+					<?php else : ?>
+						<div class="row">
+							<div class="small-12 columns">
+								<h2>Not Found</h2>
+								<p>We couldn't find what you were looking for...sorry!</p>
+							</div>
 						</div>
-						<div class="small-12 large-6 columns slider">
-							<?php echo do_shortcode( '[metaslider id=227]' ); ?>							
-						</div>
-					</div>
-				</div>			
-			<?php endwhile; ?>
-		<?php endif; ?>
+					<?php endif; ?>
+					
+					<?php get_template_part( 'parts/tpl-after-content', 'front-page' ); ?>
+					
+				</div>
+				
+				<?php get_template_part( 'parts/tpl-sidebar-left', 'front-page' ); ?>
 
+				<?php get_template_part( 'parts/tpl-sidebar-right', 'front-page' ); ?>
+
+			</div>
+		</div>
+		
 		<?php get_template_part( 'parts/tpl-after-all-content', 'front-page' ); ?>
 	
 	</div>
