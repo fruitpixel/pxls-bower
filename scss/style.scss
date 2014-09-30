@@ -1,30 +1,113 @@
+/**
+ * CONTENTS
+ *
+ * SETTINGS
+ * Global...............Globally-available variables and config.
+ *
+ * TOOLS
+ * Mixins...............Useful mixins.
+ *
+ * GENERIC
+ * Normalize.css........A level playing field.
+ * Box-sizing...........Better default `box-sizing`.
+ *
+ * BASE
+ * Frameworks...........Any css frameworks we'd like to be able to override
+ * Headings.............H1–H6 styles.
+ *
+ * OBJECTS
+ * Wrappers.............Wrapping and constraining elements.
+ *
+ * COMPONENTS
+ * Page-head............The main page header.
+ * Page-foot............The main page footer.
+ * Buttons..............Button elements.
+ *
+ * TRUMPS
+ * Text.................Text helpers.
+ */
+
+
+
+
+
+/*-------------------------------------------------*\
+	#GLOBAL
+\*-------------------------------------------------*/
+
+@import "global";
+
+
+
+
+
+/*-------------------------------------------------*\
+	#MIXINS
+\*-------------------------------------------------*/
+
+@import "mixins";
+
+
+
+
+
+/*-------------------------------------------------*\
+	#BOX-SIZING RESET
+\*-------------------------------------------------*/
+
+@import "box-sizing";
+
+
+
+
+
+/*-------------------------------------------------*\
+	#NORMALIZE
+\*-------------------------------------------------*/
+
 @import "normalize";
+
+
+
+
+
+/*-------------------------------------------------*\
+	#FRAMEWORKS
+\*-------------------------------------------------*/
+
 @import "foundation";
+
 @import "video-js";
+
+// putting gravity forms css here, instead of GF outputting it's own css in the 
+// footer (wtf??) allows us to override the default settings in our stylesheet 
 @import "gravityforms";
 
 
-$gt-color-red: #cf2e34;
-$gt-color-menubg: #353535;
-$gt-color-mastheadbg: #99999a;
 
-html,
-body {
-	font-family: 'Raleway', sans-serif;
-	margin: 0;
-	padding: 0;
-}
 
-h1 {
-	font-family: inherit;
-	font-size: 27px;
-	font-weight: 300;
-}
-h2 {
-	font-family: inherit;
-	font-size: 23px;
-	font-weight: 300;
-}
+
+/*-------------------------------------------------*\
+	#HEADINGS
+\*-------------------------------------------------*/
+
+@import "headings";
+
+
+
+
+
+/*-------------------------------------------------*\
+	#WRAPPERS
+\*-------------------------------------------------*/
+
+@import "wrappers";
+
+
+
+
+
+
 
 
 a {
@@ -38,4 +121,12 @@ a {
 }
 
 
+
+
+
+/*-------------------------------------------------*\
+	#MEDIA-QUERIES
+\*-------------------------------------------------*/
+
+// media queries always at the end....always
 @import "mediaqueries";

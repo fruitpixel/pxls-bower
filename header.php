@@ -4,6 +4,7 @@
 <!--[if IE 7 ]>    <html class="no-js ie7" <?php language_attributes(); ?>> <![endif]-->
 <!--[if IE 8 ]>    <html class="no-js ie8" <?php language_attributes(); ?>> <![endif]-->
 <!--[if (gte IE 9)|!(IE)]><!--> <html class="no-js" <?php language_attributes(); ?>> <!--<![endif]-->
+
 <head>
 	<meta charset="<?php bloginfo( 'charset' ); ?>" />
 	
@@ -28,24 +29,37 @@
 </head>
 
 <body <?php body_class(); ?>> 
-	
-		<header>
+	<div class="page">
+
+		<div class="header">
+
 			<div class="container">
+
 				<div class="row">
 					<div class="small-12 medium-4 columns">
-						<div id="logo">
+
+						<div id="logo header__logo">
 	                        <?php if ( pxls_get_company_logo() ) : ?>
 								<a href="<?php echo home_url( '/' ); ?>"><img src="<?php echo pxls_get_company_logo(); ?>" alt="<?php bloginfo( 'name' ); ?>" /></a>
 	                        <?php else : ?>
-	                        	<span id="header-logo-type"><a href="<?php echo home_url('/'); ?>"><?php bloginfo( 'name' ); ?></a></span>
+	                        	<span id="header__logo"><a href="<?php echo home_url('/'); ?>"><?php bloginfo( 'name' ); ?></a></span>
 	                        <?php endif; ?>
 						</div>
+
 					</div>
+
 					<div class="small-12 medium-8 columns">
 						<div class="row hide-for-small">
 							<div class="small-12 columns">
 								<div id="courtesy-container">
-									 <?php if ( has_nav_menu('courtesy-menu') ) { wp_nav_menu( array('theme_location' => 'courtesy-menu' ) ); } ?>
+									 <?php 
+									 if ( has_nav_menu( 'courtesy-menu' ) ) {
+									 	$args = array( 
+									 		'theme_location' => 'courtesy-menu' 
+									 	);
+									 	wp_nav_menu( $args ); 
+									 } 
+									 ?>
 								</div>
 							</div>
 						</div>
@@ -54,7 +68,7 @@
 				</div>
 			</div>
 			
-		</header>	
+		</div>	
 
 		
 
