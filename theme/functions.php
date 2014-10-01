@@ -27,14 +27,14 @@ function pxls_footer_copyright( $before = "", $after = "", $echo = true ) {
 
 function pxls_get_social_links() {
     global $PXLS_Options;
-    $twitter = $PXLS_Options->get( 'pxls_twitter_link' );
-    $facebook = $PXLS_Options->get( 'pxls_facebook_link' );
-    $linkedin = $PXLS_Options->get( 'pxls_linkedin_link' );
-    $google = $PXLS_Options->get( 'pxls_google_link' );
-    $youtube = $PXLS_Options->get( 'pxls_youtube_link' );
-    $vimeo = $PXLS_Options->get( 'pxls_vimeo_link' );
-    $instagram = $PXLS_Options->get( 'pxls_instagram_link' );
-    $flickr = $PXLS_Options->get( 'pxls_flickr_link' );
+    $twitter = $PXLS_Options['pxls_twitter_link'];
+    $facebook = $PXLS_Options['pxls_facebook_link'];
+    $linkedin = $PXLS_Options['pxls_linkedin_link'];
+    $google = $PXLS_Options['pxls_google_link'];
+    $youtube = $PXLS_Options['pxls_youtube_link'];
+    $vimeo = $PXLS_Options['pxls_vimeo_link'];
+    $instagram = $PXLS_Options['pxls_instagram_link'];
+    $flickr = $PXLS_Options['pxls_flickr_link'];
 
     if ( $twitter ) {
         $social[] = array(
