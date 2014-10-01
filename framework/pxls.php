@@ -293,7 +293,7 @@ function pxls_ga_code() {
 	if ( $enable ) { ?>
 		<script type="text/javascript">
 			var _gaq = _gaq || [];
-			_gaq.push(['_setAccount', '<?php echo $PXLS_Options->get('analytics_id'); ?>']);
+			_gaq.push(['_setAccount', '<?php echo $PXLS_Options['analytics_id']; ?>']);
 			_gaq.push(['_trackPageview']);
 			(function() {
 				var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
