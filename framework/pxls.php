@@ -76,9 +76,13 @@ class PXLS {
 		/* Sets the path to the core framework JavaScript directory URI. */
 		define( 'PXLS_JS', trailingslashit( PXLS_FRAMEWORK_URI ) . 'javascripts' );
 
+		/* Define path to the Custom Meta Boxes framework - this overrides the 
+		built-in path which defaults to the plugin folder */
 		if ( ! defined( 'CMB_PATH') )
 			define( 'CMB_PATH', trailingslashit( PXLS_FRAMEWORK_DIR ) . 'custom-meta-boxes' );
 
+		/* Define URL to the Custom Meta Boxes framework - this overrides the 
+		built-in path which defaults to the plugin folder url */
 		if ( ! defined( 'CMB_URL' ) )
 			define( 'CMB_URL', trailingslashit( PXLS_FRAMEWORK_URI ) . 'custom-meta-boxes' );
 	}
