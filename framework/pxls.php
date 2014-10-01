@@ -75,6 +75,12 @@ class PXLS {
 
 		/* Sets the path to the core framework JavaScript directory URI. */
 		define( 'PXLS_JS', trailingslashit( PXLS_FRAMEWORK_URI ) . 'javascripts' );
+
+		if ( ! defined( 'CMB_PATH') )
+			define( 'CMB_PATH', trailingslashit( PXLS_FRAMEWORK_DIR ) . 'custom-meta-boxes' );
+
+		if ( ! defined( 'CMB_URL' ) )
+			define( 'CMB_URL', trailingslashit( PXLS_FRAMEWORK_URI ) . 'custom-meta-boxes' );
 	}
 
 
