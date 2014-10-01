@@ -575,6 +575,7 @@
                 );
 
                 // SOCIAL ICONS -> Setup custom links in the footer for quick links in your panel footer icons.
+                /*
                 $this->args['share_icons'][] = array(
                     'url'   => 'https://github.com/ReduxFramework/ReduxFramework',
                     'title' => 'Visit us on GitHub',
@@ -596,6 +597,7 @@
                     'title' => 'Find us on LinkedIn',
                     'icon'  => 'el-icon-linkedin'
                 );
+                */
 
                 // Panel Intro text -> before the form
                 $this->args['intro_text'] = '';
