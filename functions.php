@@ -152,6 +152,29 @@ add_action( 'wp_enqueue_scripts', 'pxls_enqueue_js' );
 
 
 
+/**
+ * remove_dashboard_meta()
+ * 
+ * Removes all dashboard widgets.
+ * Taken from https://wordpress.org/support/topic/programatically-remove-the-wordpress-news-widget-from-the-dashboard#post-5060314
+ * 
+ * @since 2.0.0
+ */
+function remove_dashboard_meta() {
+        remove_meta_box( 'dashboard_incoming_links', 'dashboard', 'normal' );
+        remove_meta_box( 'dashboard_plugins', 'dashboard', 'normal' );
+        remove_meta_box( 'dashboard_primary', 'dashboard', 'normal' );
+        remove_meta_box( 'dashboard_secondary', 'dashboard', 'normal' );
+        remove_meta_box( 'dashboard_quick_press', 'dashboard', 'side' );
+        remove_meta_box( 'dashboard_recent_drafts', 'dashboard', 'side' );
+        remove_meta_box( 'dashboard_recent_comments', 'dashboard', 'normal' );
+        //remove_meta_box( 'dashboard_right_now', 'dashboard', 'normal' );
+        remove_meta_box( 'dashboard_activity', 'dashboard', 'side');//since 3.8
+}
+add_action( 'admin_init', 'remove_dashboard_meta' );
+
+
+
 
 
 
