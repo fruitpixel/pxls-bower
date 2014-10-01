@@ -12,9 +12,10 @@ new PXLS();
  * ----------------------------------------------------------------------------------- */
 $includes = array(
 	'theme/functions.php',
-	'theme/options.php',	// theme options
-	'theme/menus.php',		// register the theme menu areas
-	'theme/sidebars.php',	// register the theme sidebars
+	'theme/options.php',			// theme options
+	'theme/menus.php',				// register the theme menu areas
+	'theme/sidebars.php',			// register the theme sidebars
+	'theme/custom-meta-boxes.php'	// add custom meta boxes
 );
 
 // Allow child themes/plugins to add widgets to be loaded.
