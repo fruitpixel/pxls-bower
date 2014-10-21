@@ -39,11 +39,7 @@
 					<div class="small-12 medium-4 columns">
 
 						<div id="logo header__logo">
-	                        <?php if ( pxls_get_company_logo() ) : ?>
-								<a href="<?php echo home_url( '/' ); ?>"><img src="<?php echo pxls_get_company_logo(); ?>" alt="<?php bloginfo( 'name' ); ?>" /></a>
-	                        <?php else : ?>
-	                        	<span id="header__logo"><a href="<?php echo home_url('/'); ?>"><?php bloginfo( 'name' ); ?></a></span>
-	                        <?php endif; ?>
+	                        <a href="<?php echo home_url( '/' ); ?>"><img src="<?php echo trailingslashit( PXLS_URI ) ?>images/logo.png" alt="<?php bloginfo( 'name' ); ?>" /></a>
 						</div>
 
 					</div>
