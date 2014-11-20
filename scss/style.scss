@@ -32,7 +32,7 @@
 
 
 /*-------------------------------------------------*\
-	#GLOBAL
+	#SETTINGS
 \*-------------------------------------------------*/
 
 @import "global";
@@ -42,7 +42,7 @@
 
 
 /*-------------------------------------------------*\
-	#MIXINS
+	#TOOLS
 \*-------------------------------------------------*/
 
 @import "mixins";
@@ -52,30 +52,26 @@
 
 
 /*-------------------------------------------------*\
-	#BOX-SIZING RESET
+	#GENERIC
 \*-------------------------------------------------*/
 
+@import "normalize";
 @import "box-sizing";
 
 
 
 
 
-/*-------------------------------------------------*\
-	#NORMALIZE
-\*-------------------------------------------------*/
-
-@import "normalize";
-
-
-
-
 
 /*-------------------------------------------------*\
-	#FRAMEWORKS
+	#BASE
 \*-------------------------------------------------*/
 
-@import "foundation";
+@import "foundation/settings";
+@import "foundation/components/grid";
+@import "foundation/components/block-grid";
+@import "foundation/components/forms";
+@import "foundation/components/top-bar";
 
 @import "video-js";
 
@@ -83,15 +79,8 @@
 // footer (wtf??) allows us to override the default settings in our stylesheet 
 @import "gravityforms";
 
-
-
-
-
-/*-------------------------------------------------*\
-	#HEADINGS
-\*-------------------------------------------------*/
-
 @import "headings";
+
 
 
 
@@ -104,6 +93,21 @@
 @import "wrappers";
 
 
+
+
+
+/*-------------------------------------------------*\
+	#COMPONENTS
+\*-------------------------------------------------*/
+
+
+
+
+
+
+/*-------------------------------------------------*\
+	#TRUMPS
+\*-------------------------------------------------*/
 
 
 
@@ -129,4 +133,7 @@ a {
 \*-------------------------------------------------*/
 
 // media queries always at the end....always
+
+@import "foundation/components/visibility";
+
 @import "mediaqueries";
