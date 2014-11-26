@@ -136,4 +136,6 @@ module.exports = function(grunt) {
     'uglify',
     'sass'
   ]);
+
+  grunt.registerTask('default', ['build','watch']);
 };

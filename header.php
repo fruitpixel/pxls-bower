@@ -61,7 +61,7 @@
 }());
 </script>
 <noscript>
-	<link href='//fonts.googleapis.com/css?family=Raleway:400,300,700' rel='stylesheet' type='text/css'>
+	<link href='//fonts.googleapis.com/css?family=OpenSans:400,300,700' rel='stylesheet' type='text/css'>
 </noscript>
 
 </head>

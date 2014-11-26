@@ -131,21 +131,19 @@ if ( ! function_exists( 'pxls_enqueue_js' ) ) {
 	 */
 	function pxls_enqueue_js() {
 
-		wp_register_script( 'fastclick', get_template_directory_uri() . '/js/vendor/fastclick.js' );
-		wp_register_script( 'foundation', get_template_directory_uri() . '/js/foundation.min.js', array( 'fastclick' ), false, true );
-		wp_register_script( 'equalizer', get_stylesheet_directory_uri() . '/js/foundation/foundation.equalizer.js', array( 'foundation' ), false, true );
-		wp_register_script( 'topbar', get_stylesheet_directory_uri() . '/js/foundation/foundation.topbar.js', array( 'foundation' ), false, true );
-		wp_register_script( 'reveal', get_stylesheet_directory_uri() . '/js/foundation/foundation.reveal.js', array( 'foundation' ), false, true );
-		wp_register_script( 'interchange', get_stylesheet_directory_uri() . '/js/foundation/foundation.interchange.js', array( 'foundation' ), false, true );
-		wp_register_script( 'video', '//vjs.zencdn.net/4.6/video.js', array( 'interchange' ), false, true );
-		wp_register_script( 'app', get_stylesheet_directory_uri() . '/js/app.js', array( 'video' ), false, true );
+		wp_register_script( 'pxls_libs', get_template_directory_uri() . '/js/libs/libs.min.js', array( 'jquery' ), false, true );
+		wp_register_script( 'pxls_foundation', get_template_directory_uri() . '/js/libs/foundation.min.js', array( 'pxls_libs' ), false, true );
+		wp_register_script( 'pxls_video', '//vjs.zencdn.net/4.6/video.js', array( 'pxls_foundation' ), false, true );
+		wp_register_script( 'pxls_app', get_stylesheet_directory_uri() . '/js/app.js', array( 'pxls_video' ), false, true );
 
+		wp_register_script( 'pxls_modernizr', get_template_directory_uri() . '/js/libs/modernizr.min.js', array(), false, false );
+
+		wp_enqueue_script( 'pxls_modernizr' );
 		wp_enqueue_script( 'jquery' );
-		wp_enqueue_script( 'fastclick' );
-	    wp_enqueue_script( 'foundation' );
-	    wp_enqueue_script( 'equalizer' );
-	    wp_enqueue_script( 'video' );
-		wp_enqueue_script( 'app' );
+		wp_enqueue_script( 'pxls_libs' );
+	    wp_enqueue_script( 'pxls_foundation' );
+	    wp_enqueue_script( 'pxls_video' );
+		wp_enqueue_script( 'pxls_app' );
 	}
 }
 add_action( 'wp_enqueue_scripts', 'pxls_enqueue_js' );

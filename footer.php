@@ -34,7 +34,7 @@
 		</div>
 	</footer>
 
-	<script src="<?php echo trailingslashit( PXLS_URI ) ?>js/vendor/modernizr.js"></script>
+	
 
 	<?php wp_footer(); ?>
 
