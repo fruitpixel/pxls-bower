@@ -1,0 +1,32 @@
+/**
+ * CONTENTS
+ *
+ * Colors...............Color variables
+ * 
+ * Fonts................Global font variables
+ *
+ */
+
+
+
+
+
+/*-------------------------------------------------*\
+    #COLORS
+\*-------------------------------------------------*/
+
+$global-color-red: #cf2e34;
+$global-color-menubg: #353535;
+$global-color-mastheadbg: #99999a;
+
+
+
+
+
+/*-------------------------------------------------*\
+    #FONTS
+\*-------------------------------------------------*/
+
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,300,700);
+
+$global-font-main: 'Open Sans', sans-serif;

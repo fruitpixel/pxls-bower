@@ -1,0 +1,139 @@
+/**
+ * CONTENTS
+ *
+ * SETTINGS
+ * Global...............Globally-available variables and config.
+ *
+ * TOOLS
+ * Mixins...............Useful mixins.
+ *
+ * GENERIC
+ * Normalize.css........A level playing field.
+ * Box-sizing...........Better default `box-sizing`.
+ *
+ * BASE
+ * Frameworks...........Any css frameworks we'd like to be able to override
+ * Headings.............H1–H6 styles.
+ *
+ * OBJECTS
+ * Wrappers.............Wrapping and constraining elements.
+ *
+ * COMPONENTS
+ * Page-head............The main page header.
+ * Page-foot............The main page footer.
+ * Buttons..............Button elements.
+ *
+ * TRUMPS
+ * Text.................Text helpers.
+ */
+
+
+
+
+
+/*-------------------------------------------------*\
+	#SETTINGS
+\*-------------------------------------------------*/
+
+@import "global";
+
+
+
+
+
+/*-------------------------------------------------*\
+	#TOOLS
+\*-------------------------------------------------*/
+
+@import "mixins";
+
+
+
+
+
+/*-------------------------------------------------*\
+	#GENERIC
+\*-------------------------------------------------*/
+
+@import "normalize";
+@import "box-sizing";
+
+
+
+
+
+
+/*-------------------------------------------------*\
+	#BASE
+\*-------------------------------------------------*/
+
+@import "foundation/settings";
+@import "foundation/components/grid";
+@import "foundation/components/block-grid";
+@import "foundation/components/forms";
+@import "foundation/components/top-bar";
+
+@import "video-js";
+
+// putting gravity forms css here, instead of GF outputting it's own css in the 
+// footer (wtf??) allows us to override the default settings in our stylesheet 
+@import "gravityforms";
+
+@import "headings";
+
+
+
+
+
+
+/*-------------------------------------------------*\
+	#WRAPPERS
+\*-------------------------------------------------*/
+
+@import "wrappers";
+
+
+
+
+
+/*-------------------------------------------------*\
+	#COMPONENTS
+\*-------------------------------------------------*/
+
+
+
+
+
+
+/*-------------------------------------------------*\
+	#TRUMPS
+\*-------------------------------------------------*/
+
+
+
+
+
+
+a {
+	color: #ed1c24;
+}
+
+
+#wpstats {
+	float: left;
+	visibility: hidden;
+}
+
+
+
+
+
+/*-------------------------------------------------*\
+	#MEDIA-QUERIES
+\*-------------------------------------------------*/
+
+// media queries always at the end....always
+
+@import "foundation/components/visibility";
+
+@import "mediaqueries";
