@@ -7,7 +7,7 @@
     "grunt-contrib-uglify": "^0.6.0",
     "grunt-contrib-watch": "^0.6.1",
     "grunt-notify": "^0.2.20",
-    "grunt-sass": "^0.16.1",
+    "grunt-sass": "^0.18.1",
     "load-grunt-tasks": "^1.0.0",
     "node-sass": "^1.2.3",
     "time-grunt": "^1.0.0"
