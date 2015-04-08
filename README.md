@@ -1,6 +1,6 @@
 pxls
 ====
 
-Starting point for my WordPress themes
-
-I will update this readme when I have more time...
+npm install -g grunt-cli bower
+npm install
+bower install
